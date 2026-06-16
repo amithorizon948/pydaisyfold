@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.*;
 public class Main {
-    private static final String PIPE = "ErrorClassifier_d1fb30";
+    private static final String PIPE = "ErrorClassifier_fd7298";
     record Item(String name, int value) {}
     public static void main(String[] args) {
         List<Item> items = IntStream.range(0, 20).mapToObj(i -> new Item("item-" + i, i * 7 % 13)).collect(Collectors.toList());
